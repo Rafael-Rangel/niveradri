@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "projeto-vasos",
+  "private_key_id": "62821bc1fe71396bf3d83a14aa97c5fa6af0a42c",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDxrpAhEmYE84Xw\n4HRIqfYgSw1Jm5tbDbBJ4WrKOcpmZgJ+J4n4srFDmFI6V7cK0SKT137Fy6ydZduO\n3yjXdgneSrqCVNKDnd6CGUVChyMSyi03x7wjWajnr6rFkacP8iV5vBdQL5c/w4ao\n3DpjT4cXeKeadQhqLRuQHrpUOkiCtu414sBJUUq2wQLAi8HcIbGJlGXkC39xgI0u\nztWAeEKWWlk2B1DJ0jpLw7PUTvSS8lV1CNZvGtVHqzwdw/Ah3otcA82zkCe3o8ru\naGx7ieQPzd6CoeOgO1DrrZ0QAPnEUvtzfFUBVyiI1IYMndP7W+wgQu/QLskrt0Mf\nbHakbPwrAgMBAAECggEAYagBOjPWgGKseSAhLKlsuDDLbjZPyLOXy8qnnY5LgCPx\nFuvAHvuJkEAw3b1Ky7ak66tUYPVDSxh45tq6hJGAPE/i3D4NEDzOx7ARYef8HqAO\nNG9jUL9udivv68RGhrV4Oh/sJa0NRykpNPtEJpPgiPXqd4mZvFl8vTgFX3priVE7\nlU7q6o3q76GIN4kyj0NLjPgZTOevxiNpogN3WNVc7DA1WsOHZAr0+nXSuH3aOTj6\nvVuo5fIzqlx8F++tU6c9kYLwTGguZZ0EA2isY+BAOy+FnKMSfcdOIAE2UE14Egqw\nMJAHHavXAwj41SuT1Ry1zKXKv786/p3TlIh7nNsEmQKBgQD87T9rzbb/blIRWvk7\n/iGVVNTc1buZ+KTc6W8ZYN6fZnmUxT2WLJjniHtAdJjP/twvXGVeXQrLK9J1YkFa\neV0Y5iJwipPCN4OXtpaNDB4gMILU4jgMXk2X2UKzh4ubvoEqwQQbLvmY4US+9f6T\n0pAWODlP/GY61mFCNB3tw7VP0wKBgQD0nlZKXwwxNw6Y1ee6YSBxlWOVemZ91l3Q\nq8vURN6mCc/63yE0jfm6V5BrsfQwcu+cdkyqWSdbAykK+nH/g9A8pCHzqgwN5iOT\n13m15mNZTqpmoyg5V3WSN34c52zyzLkZVp2GVcpc5gQpV/pAiNfzB61d+rGdEoX5\njKGUJrdDSQKBgDfzvA37KjqDi0Avoec1pvREGfrohWHgcYg1U9CHb3hP0SGqKJ+q\nKgE+XhW6NXv943POutYPOy4K+bniDJcZNhEmCARhg6J5aXEMgW2eeqOgV7EEgmWq\nDvxCodDZcXb4w9ZTcLcawzigzPZ5sOG+uQVRVsxtB6iIeGeO4/gPTXLlAoGBANYY\n/014gyNQHOaH0Zm/CLZhGhfqWWoqBVJuCqhu3rBURkQ8psNov/noSe74gdElx7IZ\nmGBAR8HQskt5h+0rYUayIUUyv/oqQ1lSbqRWUP4Ja/sJMlt9wNmI2EhUBXc814Tl\n2lmJHOTSLTJCXjW9j8SWI5btpCbl33zbKVCR0jSBAoGAGKBCxMgqd6hS2zHsutEM\nJmApIWruEDIQ1Z0Wzv0eNigNgAemPbIsRq5vk64fpKn4Xv84Upj/kscaL5IsZQTh\n1kRcBNuVlwfXIO2w8Yf7zGXBIZYHd3BP8Gu8nPJEp59UwUf38FpGVcq+XAwNoUC4\ndQ4zwjiafUszLRgZ/3I0o3E=\n-----END PRIVATE KEY-----\n",
+  "client_email": "robocoletorplanilha@projeto-vasos.iam.gserviceaccount.com",
+  "client_id": "101332231990718728812",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/robocoletorplanilha%40projeto-vasos.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

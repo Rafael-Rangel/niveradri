@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Convite para celebrar os 19 anos da Adrielly - 1º de Agosto às 20:00">
+    <title>Convite - 19 Anos Adrielly</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Cormorant+Garamond:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="invitation-card">
+            <!-- Pontos decorativos animados -->
+            <div class="decorative-dots">
+                <span class="dot dot-1"></span>
+                <span class="dot dot-2"></span>
+                <span class="dot dot-3"></span>
+                <span class="dot dot-4"></span>
+                <span class="dot dot-5"></span>
+                <span class="dot dot-6"></span>
+                <span class="dot dot-7"></span>
+                <span class="dot dot-8"></span>
+                <span class="dot dot-9"></span>
+                <span class="dot dot-10"></span>
+            </div>
+
+            <!-- Conteúdo principal -->
+            <header class="invitation-header">
+                <div class="age-number">19</div>
+                <p class="celebration-text">VENHA CELEBRAR</p>
+                <h1 class="name">ADRIELLY</h1>
+            </header>
+
+            <!-- Ilustração da taça -->
+            <div class="wine-glass-container">
+                <div class="wine-glass">
+                    <div class="glass-bowl">
+                        <div class="wine-bubbles">
+                            <span class="bubble bubble-1"></span>
+                            <span class="bubble bubble-2"></span>
+                            <span class="bubble bubble-3"></span>
+                            <span class="bubble bubble-4"></span>
+                            <span class="bubble bubble-5"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Informações do evento -->
+            <div class="event-details">
+                <div class="date-time">
+                    <div class="date-section">
+                        <div class="divider"></div>
+                        <span class="date">1 AGO</span>
+                        <div class="divider"></div>
+                    </div>
+                    <div class="time-section">
+                        <div class="divider"></div>
+                        <span class="time">20:00</span>
+                        <div class="divider"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Endereço -->
+            <div class="address">
+                <p>Estr. do Aterrado do Rio, 105 - Guaratiba, Rio de Janeiro</p>
+                <p>RJ, 23035-290</p>
+            </div>
+
+            <!-- Formulário de confirmação -->
+            <div class="rsvp-section">
+                <h2 class="rsvp-title">- Confirme sua presença -</h2>
+                <form id="rsvpForm" class="rsvp-form" action="https://formsubmit.co/stackflow.soft@gmail.com" method="POST">
+                    <div class="input-group">
+                        <input type="text" name="NOME" id="nome" required placeholder=" ">
+                        <label for="nome">Seu Nome:</label>
+                        <div class="input-line"></div>
+                    </div>
+                    <button type="submit" class="submit-btn">
+                        <span class="btn-text"><img src="./img/checked.png" style="margin: 0px 5px -2px 0px; width: 16px">Confirmar presença</span>
+                        <div class="btn-loading">
+                            <div class="loading-spinner"></div>
+                        </div>
+                    </button>
+                    <!-- Campos ocultos para FormSubmit -->
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_next" value="https://your-domain.com/obrigado.html">
+                    <input type="hidden" name="_subject" value="Nova confirmação de presença - Aniversário Adrielly">
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
