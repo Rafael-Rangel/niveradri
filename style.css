@@ -52,6 +52,177 @@ body {
     animation: cardEntrance 1.2s ease-out;
 }
 
+/* Estilos para a seção de pagamento */
+.payment-section {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    animation: fadeIn 0.3s ease-out;
+}
+
+.payment-container {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    max-width: 500px;
+    width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.payment-header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid var(--primary-pink);
+}
+
+.payment-header h2 {
+    color: var(--primary-pink);
+    font-size: 28px;
+    margin-bottom: 10px;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.payment-header p {
+    color: var(--text-dark);
+    font-size: 18px;
+    margin: 0;
+}
+
+.payment-info {
+    margin-bottom: 30px;
+}
+
+.payment-info h3 {
+    color: var(--text-dark);
+    font-size: 20px;
+    margin-bottom: 20px;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.payment-details {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border-left: 4px solid var(--primary-pink);
+}
+
+.payment-details p {
+    margin: 8px 0;
+    font-size: 16px;
+}
+
+.payment-instructions {
+    margin-bottom: 25px;
+}
+
+.payment-instructions p {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: var(--text-dark);
+}
+
+.payment-instructions ol {
+    padding-left: 20px;
+    margin: 0;
+}
+
+.payment-instructions li {
+    margin: 8px 0;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.payment-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: linear-gradient(135deg, var(--primary-pink), #e91e63);
+    color: white;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(233, 30, 99, 0.3);
+    margin: 20px 0;
+}
+
+.payment-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 40px rgba(233, 30, 99, 0.4);
+}
+
+.payment-note {
+    background: #fff3cd;
+    border: 1px solid #ffeaa7;
+    border-radius: 8px;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+.payment-note p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.close-payment-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #999;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.close-payment-btn:hover {
+    background: #f0f0f0;
+    color: #333;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
 @keyframes cardEntrance {
     from {
         opacity: 0;
@@ -342,6 +513,63 @@ body {
     font-size: 1.3rem;
     color: var(--primary-pink);
     margin-bottom: 25px;
+}
+
+/* Seção de acesso ao pagamento */
+.payment-access-section {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 25px;
+    background: linear-gradient(135deg, #f4f4f4, #f8f4f3);
+    border: 2px solid var(--secondary-pink);
+    box-shadow: 0 10px 30px var(--shadow);
+    animation: fadeInUp 1s ease-out 1.5s both;
+    display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-radius: 20px 0px;
+}
+
+.payment-access-text {
+    font-size: 16px;
+    font-weight: 300;
+    font-family: 'Cormorant Garamond', serif;
+    color:#fff;
+}
+
+.payment-access-btn {
+    background: linear-gradient(135deg, var(--primary-pink), var(--secondary-pink), var(--primary-pink));
+    background-size: 300% 300%;
+    animation: moveGradient 4s ease infinite;
+    color: var(--white);
+    border: none;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 25px rgba(184, 90, 110, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.payment-access-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(184, 90, 110, 0.4);
+}
+
+.payment-access-btn:active {
+    transform: translateY(-1px);
+}
+
+.payment-access-icon {
+    font-size: 20px;
 }
 
 .rsvp-form {
