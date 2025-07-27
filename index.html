@@ -8,7 +8,62 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&amp;family=Cormorant+Garamond:wght@300;400;500&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="./img/Design sem nome.png" style="border-radius: 50%;">
-    <script src="script.js"></script>
+    <script src="script.js"></script><style>
+        @keyframes slideInRight {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        
+        @keyframes slideOutRight {
+            from {
+                transform: translateX(0);
+                opacity: 1;
+            }
+            to {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+        }
+        
+
+        
+        .input-group.error .input-line::after {
+            background: #e74c3c !important;
+            width: 100% !important;
+        }
+        
+        .input-group.error label {
+            color: #e74c3c !important;
+        }
+        
+        .notification-message {
+            flex: 1;
+        }
+        
+        .notification-close {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            padding: 0;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .notification-close:hover {
+            opacity: 0.7;
+        }
+    </style>
 
 <style>
         @keyframes slideInRight {
@@ -70,17 +125,17 @@
     <div class="container">
         <div class="invitation-card">
             <!-- Pontos decorativos animados -->
-            <div class="decorative-dots" style="animation-delay: 0s; transform: translateY(245.2px);">
-                <span class="dot dot-1" style="transform: translate(4.73475px, 1.8816px) scale(1.01513);"></span>
-                <span class="dot dot-2" style="transform: translate(1.62028px, 4.31333px) scale(0.912096);"></span>
-                <span class="dot dot-3" style="transform: translate(4.30941px, 0.867858px) scale(0.881411);"></span>
-                <span class="dot dot-4" style="transform: translate(-4.17087px, -2.75093px) scale(0.911932);"></span>
-                <span class="dot dot-5" style="transform: translate(-1.70802px, -2.84032px) scale(0.809613);"></span>
-                <span class="dot dot-6" style="transform: translate(-1.89522px, 1.78825px) scale(1.08961);"></span>
-                <span class="dot dot-7" style="transform: translate(2.64439px, 4.33127px) scale(0.992965);"></span>
-                <span class="dot dot-8" style="transform: translate(4.34018px, -1.1881px) scale(1.06701);"></span>
-                <span class="dot dot-9" style="transform: translate(-2.3941px, 4.8201px) scale(1.06898);"></span>
-                <span class="dot dot-10" style="transform: translate(3.81765px, 2.51366px) scale(0.883874);"></span>
+            <div class="decorative-dots" style="animation-delay: 0s; transform: translateY(268px);">
+                <span class="dot dot-1" style="transform: translate(3.04362px, 2.80589px) scale(0.845421);"></span>
+                <span class="dot dot-2" style="transform: translate(-0.729013px, -2.35624px) scale(1.15557);"></span>
+                <span class="dot dot-3" style="transform: translate(-1.49796px, 3.09621px) scale(1.16364);"></span>
+                <span class="dot dot-4" style="transform: translate(4.87643px, -0.745594px) scale(1.04789);"></span>
+                <span class="dot dot-5" style="transform: translate(1.06335px, 4.22388px) scale(1.04105);"></span>
+                <span class="dot dot-6" style="transform: translate(-1.17348px, -3.17585px) scale(1.12843);"></span>
+                <span class="dot dot-7" style="transform: translate(-2.00817px, -2.30525px) scale(1.0984);"></span>
+                <span class="dot dot-8" style="transform: translate(-4.79579px, -1.32194px) scale(0.81827);"></span>
+                <span class="dot dot-9" style="transform: translate(3.67766px, -4.17507px) scale(0.948542);"></span>
+                <span class="dot dot-10" style="transform: translate(4.04362px, -3.11223px) scale(1.16424);"></span>
             </div>
 
             <!-- Conteúdo principal -->
@@ -95,11 +150,11 @@
                 <div class="wine-glass">
                     <div class="glass-bowl">
                         <div class="wine-bubbles">
-                            <span class="bubble bubble-1" style="animation-duration: 1.83892s;"></span>
-                            <span class="bubble bubble-2" style="animation-duration: 2.47804s;"></span>
-                            <span class="bubble bubble-3" style="animation-duration: 2.2278s;"></span>
-                            <span class="bubble bubble-4" style="animation-duration: 1.56875s;"></span>
-                            <span class="bubble bubble-5" style="animation-duration: 2.05696s;"></span>
+                            <span class="bubble bubble-1" style="animation-duration: 1.73796s;"></span>
+                            <span class="bubble bubble-2" style="animation-duration: 1.55469s;"></span>
+                            <span class="bubble bubble-3" style="animation-duration: 2.05963s;"></span>
+                            <span class="bubble bubble-4" style="animation-duration: 1.59465s;"></span>
+                            <span class="bubble bubble-5" style="animation-duration: 1.82033s;"></span>
                         </div>
                     </div>
                 </div>
@@ -127,15 +182,6 @@
             </div>
 
             <!-- Botão para acessar pagamento diretamente -->
-            <div class="payment-access-section" style="animation-delay: 1.5s;">
-                <h2 class="rsvp-title">Já confirmou, mas não pagou?
-
-</h2>                <button type="button" class="payment-access-btn" onclick="showPaymentOnly()">
-                    <span class="payment-access-text"><img src="./img/icons8-foto-30.png" style="width: 16px; margin: 0px 3px -2px 0px;">Link de pagamento</span>
-                </button>
-            </div>
-
-            <!-- Formulário de confirmação -->
             <div class="rsvp-section" style="animation-delay: 1.8s;">
                 <h2 class="rsvp-title">- Confirme sua presença -</h2>
                 
@@ -156,10 +202,20 @@
                     <input type="hidden" name="_next" value="https://your-domain.com/obrigado.html">
                     <input type="hidden" name="_subject" value="Nova confirmação de presença - Aniversário Adrielly">
                 </form>
+            </div><div class="payment-access-section" style="animation-delay: 1.5s;">
+                <h2 class="rsvp-title">Já confirmou, mas não pagou?
+
+</h2>                <button type="button" class="payment-access-btn" onclick="showPaymentOnly()">
+                    <span class="payment-access-text"><img src="./img/icons8-foto-30.png" style="width: 16px; margin: 0px 3px -2px 0px;">Link de pagamento</span>
+                </button>
             </div>
+
+            <!-- Formulário de confirmação -->
+            
 
         </div>
     </div>
+
 
 
 </body></html>
