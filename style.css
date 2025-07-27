@@ -518,7 +518,6 @@ body {
 /* Seção de acesso ao pagamento */
 .payment-access-section {
     text-align: center;
-    margin-bottom: 30px;
     padding: 25px;
     background: linear-gradient(135deg, #f4f4f4, #f8f4f3);
     border: 2px solid var(--secondary-pink);
@@ -528,6 +527,7 @@ body {
         flex-direction: column;
         justify-content: center;
         border-radius: 20px 0px;
+         margin-top: 45px;
 }
 
 .payment-access-text {
