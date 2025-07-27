@@ -4,7 +4,7 @@ const CONFIG = {
     GOOGLE_SHEETS_URL: 'https://script.google.com/macros/s/AKfycbx44qlDq901KfA1WoIPdwsw912YAGEwssqrAQEdGkDRkfFJ-rWY5wf7dUijupPDch7u/exec',
     SPREADSHEET_ID: '1ntTy0PuYQEGGh095nqg_U9OLyKTZ3T8Sz_kHpLd07U0',
     // Link de pagamento do Nubank
-    PAYMENT_LINK: 'https://nubank.com.br/cobrar/9pdjs7/68855fc2-ad99-4459-826b-7ff44b252dac'
+    PAYMENT_LINK: 'https://nubank.com.br/cobrar/9pdjs7/688647cd-e578-43bd-a572-9612bb0fe082'
 };
 
 // Aguarda o carregamento completo do DOM
