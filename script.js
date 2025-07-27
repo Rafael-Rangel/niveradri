@@ -2,7 +2,9 @@
 const CONFIG = {
     // URL do Google Apps Script para integração com Google Sheets
     GOOGLE_SHEETS_URL: 'https://script.google.com/macros/s/AKfycbx44qlDq901KfA1WoIPdwsw912YAGEwssqrAQEdGkDRkfFJ-rWY5wf7dUijupPDch7u/exec',
-    SPREADSHEET_ID: '1ntTy0PuYQEGGh095nqg_U9OLyKTZ3T8Sz_kHpLd07U0'
+    SPREADSHEET_ID: '1ntTy0PuYQEGGh095nqg_U9OLyKTZ3T8Sz_kHpLd07U0',
+    // Link de pagamento do Nubank
+    PAYMENT_LINK: 'https://nubank.com.br/cobrar/9pdjs7/68855fc2-ad99-4459-826b-7ff44b252dac'
 };
 
 // Aguarda o carregamento completo do DOM
@@ -102,8 +104,8 @@ function setupFormHandling() {
             // Envia para Google Sheets
             await submitToGoogleSheets(name);
             
-            // Sucesso
-            showNotification('Presença confirmada com sucesso! 🎉', 'success');
+            // Sucesso - mostra seção de pagamento
+            showPaymentSection(name);
             form.reset();
             
         } catch (error) {
@@ -292,6 +294,8 @@ function addDynamicStyles() {
             }
         }
         
+
+        
         .input-group.error .input-line::after {
             background: #e74c3c !important;
             width: 100% !important;
@@ -343,5 +347,124 @@ function setupGoogleSheetsIntegration() {
     console.log('3. Cole o código do Apps Script fornecido');
     console.log('4. Configure as permissões');
     console.log('5. Atualize a URL no arquivo script.js');
+}
+
+// Mostra a seção de pagamento após confirmação
+function showPaymentSection(name) {
+    // Remove seção de pagamento existente se houver
+    const existingPaymentSection = document.querySelector('.payment-section');
+    if (existingPaymentSection) {
+        existingPaymentSection.remove();
+    }
+
+    // Cria a seção de pagamento
+    const paymentSection = document.createElement('div');
+    paymentSection.className = 'payment-section';
+    paymentSection.innerHTML = `
+        <div class="payment-container">
+            <div class="payment-header">
+                <h2>🎉 Obrigada, ${name}!</h2>
+                <p>Sua presença foi confirmada com sucesso!</p>
+            </div>
+            
+            <div class="payment-info">
+                <h3>Para finalizar sua confirmação, realize o pagamento:</h3>
+                <div class="payment-details">
+                    <p><strong>Valor:</strong> R$ 30,00</p>
+                    <p><strong>Forma de pagamento:</strong> PIX</p>
+                    <p><strong>Beneficiário:</strong> Adrielly Freire Torres</p>
+                </div>
+                
+                <div class="payment-instructions">
+                    <p><strong>Instruções:</strong></p>
+                    <ol>
+                        <li>Clique no botão abaixo para acessar o link de pagamento</li>
+                        <li>Escaneie o QR Code ou use a chave PIX</li>
+                        <li>Confirme o pagamento no seu app bancário</li>
+                        <li>Pronto! Sua confirmação está completa</li>
+                    </ol>
+                </div>
+                
+                <div class="payment-button-container">
+                    <a href="${CONFIG.PAYMENT_LINK}" target="_blank" class="payment-button">
+                        <span class="payment-text">Pagar R$ 30,00 via PIX</span>
+                    </a>
+                </div>
+                
+
+            </div>
+            
+            <button class="close-payment-btn" onclick="closePaymentSection()">
+                <span>✕</span>
+            </button>
+        </div>
+    `;
+
+    // Adiciona ao DOM
+    document.body.appendChild(paymentSection);
+}
+
+// Função para mostrar apenas o link de pagamento (sem confirmação de presença)
+function showPaymentOnly() {
+    // Remove seção de pagamento existente se houver
+    const existingPaymentSection = document.querySelector('.payment-section');
+    if (existingPaymentSection) {
+        existingPaymentSection.remove();
+    }
+
+    // Cria a seção de pagamento simplificada
+    const paymentSection = document.createElement('div');
+    paymentSection.className = 'payment-section';
+    paymentSection.innerHTML = `
+        <div class="payment-container">
+            <div class="payment-header">
+                <h2>Link de Pagamento</h2>
+                <p>Acesse o link abaixo para realizar o pagamento</p>
+            </div>
+            
+            <div class="payment-info">
+                <div class="payment-details">
+                    <p><strong>Valor:</strong> R$ 30,00</p>
+                    <p><strong>Forma de pagamento:</strong> PIX</p>
+                    <p><strong>Beneficiário:</strong> Adrielly Freire Torres</p>
+                </div>
+                
+                <div class="payment-instructions">
+                    <p><strong>Instruções:</strong></p>
+                    <ol>
+                        <li>Clique no botão abaixo para acessar o link de pagamento</li>
+                        <li>Escaneie o QR Code ou use a chave PIX</li>
+                        <li>Confirme o pagamento no seu app bancário</li>
+                        <li>Pronto! Seu pagamento está confirmado</li>
+                    </ol>
+                </div>
+                
+                <div class="payment-button-container">
+                    <a href="${CONFIG.PAYMENT_LINK}" target="_blank" class="payment-button">
+                        <span class="payment-text">Pagar R$ 30,00 via PIX</span>
+                    </a>
+                </div>
+             
+            </div>
+            
+            <button class="close-payment-btn" onclick="closePaymentSection()">
+                <span>✕</span>
+            </button>
+        </div>
+    `;
+
+    // Adiciona ao DOM
+    document.body.appendChild(paymentSection);
+}
+
+// Função para fechar a seção de pagamento
+function closePaymentSection() {
+    const paymentSection = document.querySelector('.payment-section');
+    if (paymentSection) {
+        paymentSection.style.animation = 'fadeOut 0.3s ease-in';
+        setTimeout(() => {
+            paymentSection.remove();
+        }, 300);
+    }
 }
 
