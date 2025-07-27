@@ -379,7 +379,7 @@ function showPaymentSection(name) {
                     <p><strong>Instruções:</strong></p>
                     <ol>
                         <li>Clique no botão abaixo para acessar o link de pagamento</li>
-                        <li>Escaneie o QR Code ou use a chave PIX</li>
+                        <li>Escaneie o QR Code ou copie e cole o código abaixo.</li>
                         <li>Confirme o pagamento no seu app bancário</li>
                         <li>Pronto! Sua confirmação está completa</li>
                     </ol>
@@ -433,7 +433,7 @@ function showPaymentOnly() {
                     <p><strong>Instruções:</strong></p>
                     <ol>
                         <li>Clique no botão abaixo para acessar o link de pagamento</li>
-                        <li>Escaneie o QR Code ou use a chave PIX</li>
+                        <li>Escaneie o QR Code ou copie e cole o código abaixo.</li>
                         <li>Confirme o pagamento no seu app bancário</li>
                         <li>Pronto! Seu pagamento está confirmado</li>
                     </ol>
